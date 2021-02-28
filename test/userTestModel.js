@@ -1,4 +1,4 @@
-import UserModel from "../models/userModel.js";
+const UserModel = require ("../models/userModel.js");
 var inittest = async () => {
   var usermodel = new UserModel();
   /*usermodel.createUser(

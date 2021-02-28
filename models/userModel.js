@@ -1,6 +1,6 @@
-import mongoose from "../connection/connect.js";
-import modelenum from "../utils/enumModel.js";
-import RolesModel from "./rolesModel.js";
+const mongoose = require ("../connection/connect.js");
+const modelenum = require ("../utils/enumModel.js");
+const RolesModel = require ("./rolesModel.js");
 class UserModel {
   constructor() {
     var roles = new RolesModel();
@@ -161,4 +161,4 @@ class UserModel {
     return [];
   }
 }
-export default UserModel;
+module.exports = UserModel;

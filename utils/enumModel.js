@@ -1,3 +1,4 @@
 const modelenum = new Array();
 
-export default modelenum;
+
+module.exports =  modelenum;

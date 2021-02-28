@@ -1,6 +1,6 @@
-import { response } from "express";
-import jwt from "jsonwebtoken";
-import USER from "../models/userModel.js";
+const { response } = require ("express");
+const jwt = require ("jsonwebtoken");
+const USER =require ("../models/userModel.js");
 var key = "shhhhhhhhclave";
 var user = new USER();
 class JsonWebTokenManagement {
@@ -58,4 +58,4 @@ class JsonWebTokenManagement {
     });
   }
 }
-export default JsonWebTokenManagement;
+module.exports = JsonWebTokenManagement;

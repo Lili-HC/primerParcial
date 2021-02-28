@@ -1,5 +1,5 @@
-import mongoose from "../connection/connect.js";
-import modelenum from "../utils/enumModel.js";
+const mongoose = require ("../connection/connect.js");
+const modelenum = require ("../utils/enumModel.js");
 class RolesModel {
   constructor() {
     var Schema = mongoose.Schema;
@@ -53,4 +53,4 @@ class RolesModel {
     return result;
   }
 }
-export default RolesModel;
+module.exports = RolesModel;
