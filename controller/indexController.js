@@ -1,6 +1,6 @@
-const UserModel = require ("../models/userModel.js");
-const Sha1 = require ("sha1");
-const JsonWebTokenManagement = require ("../middleware/JsonWebTokenManagement.js");
+import UserModel from "../models/userModel.js";
+import Sha1 from "sha1";
+import JsonWebTokenManagement from "../middleware/JsonWebTokenManagement.js";
 var USER = new UserModel();
 var jsonwebtoken = new JsonWebTokenManagement();
 class IndexController {
@@ -27,4 +27,4 @@ class IndexController {
       .json({ serverResponse: "El password o correo son incorrectos" });
   }
 }
-module.exports = IndexController;
+export default IndexController;

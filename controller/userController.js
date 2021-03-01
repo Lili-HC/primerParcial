@@ -1,7 +1,7 @@
-const UserModel = require("../models/userModel.js");
-const RolesModel = require("../models/rolesModel.js");
-const Sha1 = require("sha1");
-const empty = require("is-empty");
+import UserModel from "../models/userModel.js";
+import RolesModel from "../models/rolesModel.js";
+import Sha1 from "sha1";
+import empty from "is-empty";
 var roles = new RolesModel();
 var USER = new UserModel();
 class UserController {
@@ -102,4 +102,4 @@ class UserController {
     res.sendFile("/opt/app/img/error.jpg");
   }
 }
-module.exports = UserController;
+export default UserController;

@@ -1,4 +1,4 @@
-const RolesModel = require ("../models/rolesModel.js");
+import RolesModel from "../models/rolesModel.js";
 var roles = new RolesModel();
 class RolesController {
   constructor() {}
@@ -35,4 +35,4 @@ class RolesController {
     res.status(200).json({ serverResponse: result });
   }
 }
-module.exports = RolesController;
+export default RolesController;

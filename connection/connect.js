@@ -1,10 +1,11 @@
-const mongoose= require ("mongoose");
-const dotenv = require("dotenv");
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 dotenv.config();
-mongoose.connect("mongodb://localhost/examen",{
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}
+mongoose.connect(
+  `mongodb://${process.env.IPHOSTDB}:${process.env.PORTDB}/${process.env.NAMEDB}`,
+  {
+    useNewUrlParser: true,
+  }
 );
 var db = mongoose.connection;
 db.on("error", () => {
@@ -13,4 +14,4 @@ db.on("error", () => {
 db.on("open", () => {
   console.log("Conexion exitosa");
 });
-module.exports = mongoose;
+export default mongoose;

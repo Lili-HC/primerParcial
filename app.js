@@ -1,14 +1,14 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-var mustacheExpress = require("mustache-express");
-var indexRouter = require("./routes/routes.js");
-var fileUpload = require("express-fileupload");
-var dotenv = require("dotenv");
+import createError from "http-errors";
+import express from "express";
+import path from "path";
+import cookieParser from "cookie-parser";
+import logger from "morgan";
+import mustacheExpress from "mustache-express";
+import indexRouter from "./routes/routes.js";
+import fileUpload from "express-fileupload";
+import dotenv from "dotenv";
 
-//const __dirname = "./";
+const __dirname = "./";
 var app = express();
 dotenv.config();
 // view engine setup
@@ -45,8 +45,8 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-var port = 4004;
+var port = 8000;
 app.listen(port, () => {
   console.log("server running in " + port);
 });
-module.exports = app;
+export default app;
